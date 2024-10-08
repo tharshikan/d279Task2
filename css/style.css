@@ -1,0 +1,184 @@
+/* Branding Colors */
+:root {
+    --midnight-blue: #003B6D;
+    --blue-sky: #6699CC;
+    --dim-gray: #676767;
+    --silver: #BDBDBD;
+    --white: #FFFFFF;
+    --black: #000000;
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--white);
+    color: var(--black);
+}
+
+header {
+    background-color: var(--midnight-blue);
+    color: var(--white);
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    max-height: 60px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+
+nav li {
+    position: relative;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    padding: 14px 20px;
+    display: block;
+}
+
+nav a.active, nav a:hover {
+    background-color: var(--blue-sky);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--midnight-blue);
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    padding: 12px 16px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.breadcrumbs {
+    background-color: var(--silver);
+    padding: 10px 20px;
+}
+
+.breadcrumbs a {
+    color: var(--midnight-blue);
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    color: var(--midnight-blue);
+}
+
+.cta-button {
+    background-color: var(--blue-sky);
+    color: var(--white);
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 20px 0;
+}
+
+.cta-button:hover {
+    background-color: var(--midnight-blue);
+}
+
+footer {
+    background-color: var(--dim-gray);
+    color: var(--white);
+    text-align: center;
+    padding: 10px 0;
+}
+
+.footer-nav {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-nav li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer-nav a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+}
+
+/* Form Styles */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+fieldset {
+    border: 1px solid var(--silver);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+legend {
+    padding: 0 10px;
+    font-weight: bold;
+    color: var(--midnight-blue);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: var(--blue-sky);
+    color: var(--white);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--midnight-blue);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+    .dropdown-content {
+        position: static;
+    }
+}
